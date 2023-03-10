@@ -10,10 +10,11 @@ p = document.getElementById('out');
 d = document.querySelector('#out')
 p.innerHTML = 555;
 d.innerHTML = 777777777
-console.log(p);
 
+//TASK 1 (Lesson 2)
+let myYear = document.querySelector('#myYear')
 
 let year = 1982;
-console.log(2023 - 1982);
+console.log(2023 - year);
 
-d.innerHTML =  year
+myYear.innerText = year
