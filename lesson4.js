@@ -6,3 +6,5 @@ if (b == 5) {
 } else {
   console.log('no');
 };
+
+console.log('My iPad');
