@@ -28,7 +28,7 @@ document.querySelector('#btn').onclick = checkNum;
 function checkNum() {
   let num = userNum.value;
   num = parseInt(num);
-  console.log(num);
+  // console.log(num);
   
   if (isNaN(num)) {
     alert('Введіть число');
@@ -36,6 +36,7 @@ function checkNum() {
   else {
   if (num == r) {
     alert('Вірно');
+    location.reload();
   }
   else {
     alert('Спробуй ще');
