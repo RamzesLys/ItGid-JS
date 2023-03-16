@@ -15,13 +15,28 @@ let left = 0;
 
 document.onkeypress = (e) => {
   console.log(e.keyCode);
-  let sq = document.querySelector('sq');
+  console.log(e.code);
+  // console.log(e.key);
+  let sq = document.querySelector('.sq');
   if (e.keyCode == 100) {
     left = left + 10;
     sq.style.marginLeft = left + 'px';
-
+  } 
+  if (e.keyCode == 97) {
+    left = left - 10;
+    sq.style.marginLeft = left + 'px';
   }
   
 }
 
-
+document.onkeydown = (event) => {
+  let sq = document.querySelector('.sq');
+  if (event.keyCode == 39) {
+    left = left + 10;
+    sq.style.marginLeft = left + 'px';
+  }
+  if (event.keyCode == 37) {
+    left = left - 10;
+    sq.style.marginLeft = left + 'px';
+  }
+}
