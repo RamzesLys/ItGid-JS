@@ -1,16 +1,27 @@
-const input = document.querySelector('#input');
+// const input = document.querySelector('#input');
 
 // input.onkeypress = (e) => {
-//   if (e.keyCode < 97 || e.keyCode > 122) {
-//     console.log('Введіть літери');
-//     return false
-    
-//   } else {
-//     input.value = input.value.toUpperCase()
-//   }
+//   input.addEventListener('input', () => {
+//     input.value = input.value.toUpperCase();  
+//   });
 
+//   if (e.keyCode < 97 || e.keyCode > 122) {
+//     alert('Введіть літери');
+//     return false 
+//   } 
 // }
 
-input.addEventListener('input', () => {
-  input.value = input.value.toUpperCase();
-})
+let left = 0;
+
+document.onkeypress = (e) => {
+  console.log(e.keyCode);
+  let sq = document.querySelector('sq');
+  if (e.keyCode == 100) {
+    left = left + 10;
+    sq.style.marginLeft = left + 'px';
+
+  }
+  
+}
+
+
