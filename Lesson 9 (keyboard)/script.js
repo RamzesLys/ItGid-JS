@@ -1,19 +1,15 @@
-const test = document.querySelector('#test');
-test.onkeypress = (e) => {
-  // console.log(e.keyCode);
-  
+const input = document.querySelector('#input');
+
+input.onkeypress = (e) => {
   if (e.keyCode < 97 || e.keyCode > 122) {
-    console.log('Невірні символи');
+    console.log('Введіть літери');
     return false
     
   } else {
     let upperKey = e.key.toUpperCase();
-    e.key.innerHTML += upperKey;
+    e.value += upperKey;
     console.log(upperKey);
     return upperKey
-
-    
-
   }
 
 }
