@@ -1,0 +1,22 @@
+.block-1 {
+  width: 150px;
+  height: 150px;
+  background: bisque;
+  border: 1px solid #777;
+  margin: 50px;
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  border: 4px solid green;
+}
+
+.button {
+  border: 1px red solid;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: #fff;
+}
