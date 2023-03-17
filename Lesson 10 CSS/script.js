@@ -13,6 +13,10 @@ block1.classList.toggle('red');
 block1.classList.toggle('red');
 
 const button = document.querySelector('.button');
-button.onclick = () => {
-  block1.classList.toggle('red');
-}
+// button.onclick = () => {
+//   block1.classList.toggle('red');
+// }
+
+button.addEventListener (("dblclick"), () => {
+  block1.classList.toggle('red')
+})
