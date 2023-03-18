@@ -11,3 +11,14 @@ body {
 .active {
   font-weight: bold;
 }
+
+.tab {
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+}
+
+ul {
+  padding-left: 0;
+}
