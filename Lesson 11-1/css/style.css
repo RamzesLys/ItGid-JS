@@ -1,0 +1,11 @@
+.round-close {
+  border: 1px solid red;
+  border-radius: 100%;
+  background: red;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 20px;
+
+}
