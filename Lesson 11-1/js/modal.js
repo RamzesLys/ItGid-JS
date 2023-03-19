@@ -9,11 +9,8 @@ document.querySelectorAll('.modal-close').forEach(function (element) {
 });
 
 document.querySelectorAll('.modal-wrap').forEach(function (element) {
-   // закрити вікно на кліку за межами
-  element.onclick = closeModal;
+ element.onclick = closeModalWrap;
 });
-
-
 
 function showModal() {
   let modalId = this.dataset.modal;
