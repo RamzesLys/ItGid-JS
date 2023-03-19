@@ -4,11 +4,13 @@ document.querySelectorAll('.modal-show').forEach(function (element) {
 });
 
 document.querySelectorAll('.modal-close').forEach(function (element) {
+  // закрити вікно на кнопці
   element.onclick = closeModal;
 });
 
 document.querySelectorAll('.modal-wrap').forEach(function (element) {
- element.onclick = closeModalWrap;
+   // закрити вікно на кліку за межами
+  element.onclick = closeModal;
 });
 
 
@@ -20,26 +22,17 @@ function showModal() {
   document.onkeydown = function (event) {
    if (event.keyCode == 27) {
       document.querySelectorAll('.modal-wrap').forEach(function (element) {
-        element.classList.add('hide');
-        element.children[0].classList.add('hide');
-        document.onkeydown = null;
-      })
+       closeModal();
+      });
     }
   }
 }
 
 function closeModal() {
-  let modalId = this.dataset.modal;
-  document.querySelector(modalId).parentElement.classList.add('hide');
-  document.querySelector(modalId).classList.add('hide');
-  document.onkeydown = null;
-}
-
-
-function closeModalWrap() {
-  this.classList.add('hide');
- this.children[0].classList.add('hide');
- document.onkeydown = null;
+  document.querySelectorAll('.modal-wrap').forEach(function (element) {
+    element.classList.add('hide');
+    document.onkeydown = null;
+  });
 }
 
 
