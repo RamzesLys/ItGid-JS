@@ -9,7 +9,7 @@ document.querySelectorAll('.modal-close').forEach(function (element) {
 });
 
 document.querySelectorAll('.modal-wrap').forEach(function (element) {
- element.onclick = closeModalWrap;
+ element.onclick = closeModal;
 });
 
 function showModal() {
