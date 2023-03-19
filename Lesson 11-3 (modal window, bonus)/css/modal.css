@@ -1,0 +1,39 @@
+body {
+  background: green;
+}
+
+.hide {
+  display: none;
+}
+
+.modal-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0, .5);
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+}
+
+.modal {
+  width: 250px;
+  height: 320px;
+  border: 1px solid #000;
+  padding: 10px;
+  background: #fff;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.hide {
+  display: none;
+}
