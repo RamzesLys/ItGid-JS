@@ -7,6 +7,7 @@ document.querySelectorAll('.modal-close').forEach(function (element) {
 });
 
 document.querySelectorAll('.modal-wrap').forEach(function (element) {
+  //console.log(element)
  element.onclick = closeModalWrap;
 });
 
@@ -14,14 +15,14 @@ document.querySelectorAll('.modal-wrap').forEach(function (element) {
 function showModal() {
   let modalId = this.dataset.modal;
   document.querySelector(modalId).classList.remove('hide');
-  document.onkeydown = function (event) {
-   if (event.keyCode == 27) {
-      document.querySelectorAll('.modal-wrap').forEach(function (element) {
-        element.classList.add('hide');
-        document.onkeydown = null;
-      });
-    }
-  }
+  // document.onkeydown = function (event) {
+  //  if (event.keyCode == 27) {
+  //     document.querySelectorAll('.modal-wrap').forEach(function (element) {
+  //       element.classList.add('hide');
+  //       document.onkeydown = null;
+  //     });
+  //   }
+  // }
 }
 
 function closeModal() {
