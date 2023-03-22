@@ -35,8 +35,7 @@
   background: red;
   min-height: 50px; 
   padding: 10px;
-  color: #fff;
-  font-weight: 600;
+  
 }
 
 .right-50 {
@@ -48,4 +47,9 @@
 
 .read-rules, .read-rules-back {
   cursor: pointer;
+}
+
+.left-50, .read-rules-back {
+  color: #fff;
+  font-weight: 600;
 }
