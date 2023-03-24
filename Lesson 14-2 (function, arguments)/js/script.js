@@ -31,6 +31,7 @@ const f4 = (Uuu) => {
   //Uuu - id елемента
   let d = document.querySelector('#' + Uuu);
   d.innerHTML += ' Працює';
+  console.log(Uuu + '-------');
 }
 
 f4('one');
