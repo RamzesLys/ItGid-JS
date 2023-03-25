@@ -7,6 +7,12 @@ const myClick = (event) => {
   //console.log(event);
 }
 
-document.querySelector('#one').onclick = myClick;
-document.querySelector('body').onclick = myClick;
-document.querySelector('html').onclick = myClick;
+// document.querySelector('#one').onclick = myClick;
+// document.querySelector('body').onclick = myClick;
+// document.querySelector('html').onclick = myClick;
+
+document.onclick = (event) => {
+  console.log(event);
+  if (event.target.id == 'one')
+  console.log('Клік на one');
+}
