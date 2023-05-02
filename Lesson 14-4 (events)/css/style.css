@@ -6,4 +6,18 @@ div {
 
 body {
   min-height: 500px;
+  background-color: blue;
+}
+
+#one {
+  background-color: red;
+}
+
+.two {
+  background-color: green;
+}
+
+.three {
+  background-color: aqua;
+  width: 40%;
 }

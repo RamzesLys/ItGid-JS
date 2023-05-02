@@ -29,7 +29,7 @@ f3()
 
 const f4 = (Uuu) => {
   //Uuu - id елемента
-  let d = document.querySelector('#' + Uuu);
+  let d = document.querySelector('#' +Uuu);
   d.innerHTML += ' Працює';
   console.log(Uuu + '-------');
 }
@@ -47,7 +47,7 @@ const summ = (b, a = 3, c = 4) => {
   // }
 
   // b ? b = b : b = 1;
-  return a*b;
+  return a * b;
 }
 
 console.log(summ(12 ,4));
