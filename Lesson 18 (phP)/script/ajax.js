@@ -1,3 +1,4 @@
+
 function ajax(url, method, functionName, dataArray) {
   let xhttp = new XMLHttpRequest();
   xhttp.open(method, url, true);
@@ -11,11 +12,12 @@ function ajax(url, method, functionName, dataArray) {
   }
 }
 
-const requestData = (dataArr) => {
+function requestData(dataArr) {
   let out = '';
   for (let key in dataArr) {
-    out += `${key} = ${dataArr[key]}&`;
+    out += `${key}=${dataArr[key]}&`;
   }
   console.log(out);
   return out;
 }
+
