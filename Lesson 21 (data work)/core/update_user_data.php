@@ -3,7 +3,7 @@ require_once 'config.php';
 
 $email= trim($_POST['email']);
 $name= trim($_POST['name']);
-$pass= trim($_POST['pass']);
+$password = trim($_POST['pass']);
 $birthday= trim($_POST['birthday']);
 
 if ($email ==''){
@@ -18,7 +18,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "UPDATE users SET name='".$name."', password='".$pass."', birthday='".$birthday."' WHERE email='".$email."'";
+$sql = "UPDATE users SET name='".$name."', password='".$password."', birthday='".$birthday."' WHERE email='".$email."'";
 
 if ($conn->query($sql) === TRUE) {
     echo 1;
