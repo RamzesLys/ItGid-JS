@@ -39,5 +39,9 @@ document.querySelector('#signup-submit').onclick = function(event) {
 
 function updateUserData(result) {
 	console.log(result);
-	
+	if (result == 1) {
+	alert ('Дані успішно оновлено!');
+	} else {
+	alert ('Помилка оновлення');
+	}
 }
