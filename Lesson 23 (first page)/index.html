@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <div class="col l10">
+          <h1 class="site-title center-align">Our Project</h1>
+        </div>
+        <div class="col l2"></div>
+      </div>
+    </div>
+  </header>
+  <form method="POST">
+    <div>name: <input type="text" name="name" id="signup-name"></div>
+    <div>password: <input type="text" name="pass" id="signup-pass"></div>
+    <div>email: <input type="text" name="email" id="signup-email"></div>
+    <div>birthday: <input type="text" name="birthday" id="signup-birthday"></div>
+    <div>sex:
+        <div> <input type="radio" value="male" name="sex" class="sex" checked>male</div>
+        <div><input type="radio" value="female" name="sex" class="sex" >female</div>
+        <div><input type="radio" value="other" name="sex" class="sex" >other</div>
+    </div>
+    <input type="submit" value="send" id="signup-submit">
+</form>
+<hr>
+
+<form method="POST">
+  <div class="row">
+    <div class="input-field col l12">
+      <input placeholder="Your email" id="login-email" type="text" class="validate">
+      <label for="login-email">Email</label>
+    </div>
+    <div class="input-field col l12">
+      <input id="login-pass" type="password">
+      <label for="login-pass">Password</label>
+    </div>
+    <div class="col l12 right-align">
+      <button id="login-submit" class="waves-effect waves-light btn">Login</button>
+    </div>
+  </div>
+
+</form>
+
+
+  <script src="js/materialize.min.js"></script>
+  <script src="script/ajax.js"></script>
+  <script src="script/myScript.js"></script>
+</body>
+</html>
