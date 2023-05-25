@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 	let elems = document.querySelectorAll('.datepicker');
-	let instances = M.Datepicker.init(elems, {firstDay, minDate});
+	let instances = M.Datepicker.init(elems, {
+		"format": "yyyy-mm-dd"
+	});
 });
 
 let userEmail = getCookie('email')
@@ -29,7 +31,7 @@ function getUserData(result) {
 	document.querySelector('#signup-name').value = result.name;
 	document.querySelector('#signup-pass').value = result.password;
 	document.querySelector('#signup-birthday').value = result.birthday;
-	M.updateTextField();
+	M.updateTextFields();
 }
 
 document.querySelector('#signup-submit').onclick = function(event) {
@@ -46,8 +48,8 @@ document.querySelector('#signup-submit').onclick = function(event) {
 function updateUserData(result) {
 	console.log(result);
 	if (result == 1) {
-	alert ('Дані успішно оновлено!');
+	M.toast({html: 'Дані успішно оновлено!'})
 	} else {
-	alert ('Помилка оновлення');
+	M.toast({html: 'Помилка оновлення'})
 	}
 }
