@@ -1,3 +1,9 @@
+<!-- Lesson 23 01:16 -->
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,47 +20,131 @@
   <header class="site-header">
     <div class="container">
       <div class="row">
-        <div class="col l10">
+        <div class="col l8">
           <h1 class="site-title center-align">Our Project</h1>
         </div>
-        <div class="col l2"></div>
+        <div class="col l2">
+          <button class="modal-show waves-effect waves-light btn" data-modal="#sign-up">SignUp</button>
+        </div>
+        <div class="col l2">
+          <button class="modal-show waves-effect waves-light btn" data-modal="#log-in">LogIn</button>
+        </div>
       </div>
     </div>
-  </header>
-  <form method="POST">
-    <div>name: <input type="text" name="name" id="signup-name"></div>
-    <div>password: <input type="text" name="pass" id="signup-pass"></div>
-    <div>email: <input type="text" name="email" id="signup-email"></div>
-    <div>birthday: <input type="text" name="birthday" id="signup-birthday"></div>
-    <div>sex:
-        <div> <input type="radio" value="male" name="sex" class="sex" checked>male</div>
-        <div><input type="radio" value="female" name="sex" class="sex" >female</div>
-        <div><input type="radio" value="other" name="sex" class="sex" >other</div>
-    </div>
-    <input type="submit" value="send" id="signup-submit">
-</form>
-<hr>
 
-<form method="POST">
-  <div class="row">
-    <div class="input-field col l12">
-      <input placeholder="Your email" id="login-email" type="text" class="validate">
-      <label for="login-email">Email</label>
-    </div>
-    <div class="input-field col l12">
-      <input id="login-pass" type="password">
-      <label for="login-pass">Password</label>
-    </div>
-    <div class="col l12 right-align">
-      <button id="login-submit" class="waves-effect waves-light btn">Login</button>
+  </header>
+  <div class="modal-wrap hide" id="sign-up">
+    <div class="modal-project sign-up-modal">
+      <button class="modal-project-close btn-floating waves-effect waves-light red">
+        <i class="material-icons">close</i>
+      </button>
+      <div class="form-slider-wrapper">
+        <div class="form-slider">
+          <div class="left-50">
+            <form>
+              <div class="row">
+                <div class="input-field col l6">
+                  <input placeholder="Your name" name="name" id="signup-name" type="text" class="validate">
+                  <label for="signup-name">Name</label>
+                </div>
+                <div class="input-field col l6">
+                  <input name="pass" id="signup-pass" type="password" class="validate">
+                  <label for="signup-pass">Password</label>
+                </div>
+                <div class="input-field col l6">
+                  <input name="email" id="signup-email" type="email" class="validate">
+                  <label for="signup-email">Email</label>
+                </div>
+                <div class="input-field col l6">
+                  <input placeholder="Your Birthday" name="birthday" id="signup-birthday" type="text" class="datepicker">
+                  <label for="signup-birthday">Birthday</label>
+                </div>
+                <div class="col l12">
+                  <p>
+                    <label>
+                      <input type="radio" value="male" name="sex" class="sex" checked />
+                      <span>Male</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="radio" value="female" name="sex" class="sex"/>
+                      <span>Female</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="radio" value="other" name="sex" class="sex" />
+                      <span>Other</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="col l6">
+                  <p>
+                    <label>
+                      <input type="checkbox" id="agree-rules"/>
+                      <span>Agree Rules</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="col l6">
+                  <p class="read-rules">
+                  (read rules)
+                </p>
+              </div>
+                <div class="col l12 right-align">
+                  <button id="signup-submit" class="waves-effect waves-light btn disabled">Sign In</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="right-50">
+            <p class="read-rules-back">Back</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi odio fugit quod architecto vero sapiente quae? Velit praesentium at dolores inventore odit ipsam repellat libero vero? Odio porro numquam a ipsa! Debitis quas dolorum eos odit velit porro quam molestiae!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi odio fugit quod architecto vero sapiente quae? Velit praesentium at dolores inventore odit ipsam repellat libero vero? Odio porro numquam a ipsa! Debitis quas dolorum eos odit velit porro quam molestiae!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi odio fugit quod architecto vero sapiente quae? Velit praesentium at dolores inventore odit ipsam repellat libero vero? Odio porro numquam a ipsa! Debitis quas dolorum eos odit velit porro quam molestiae!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi odio fugit quod architecto vero sapiente quae? Velit praesentium at dolores inventore odit ipsam repellat libero vero? Odio porro numquam a ipsa! Debitis quas dolorum eos odit velit porro quam molestiae!
+            </p>
+            <p class="read-rules-back">Back</p>
+          </div>
+        </div>
+      </div>
+     
     </div>
   </div>
 
-</form>
+  <div class="modal-wrap hide" id="log-in">
+    <div class="modal-project">
+      <form>
+        <div class="row">
+          <div class="input-field col l12">
+            <input placeholder="Your email" id="login-email" type="text" class="validate">
+            <label for="login-email">Email</label>
+          </div>
+          <div class="input-field col l12">
+            <input id="login-pass" type="password">
+            <label for="login-pass">Password</label>
+          </div>
+          <div class="col l12 right-align">
+            <button id="login-submit" class="waves-effect waves-light btn">Login</button>
+          </div>
+        </div>
+ 
+      </form>
+      <button class="modal-project-close btn-floating waves-effect waves-light red">
+        <i class="material-icons">close</i>
+      </button>
+    </div>
+  </div>
+    
 
 
   <script src="js/materialize.min.js"></script>
   <script src="script/ajax.js"></script>
   <script src="script/myScript.js"></script>
+  <script src="script/main.js"></script>
 </body>
 </html>

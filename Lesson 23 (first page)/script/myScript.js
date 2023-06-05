@@ -23,11 +23,12 @@ document.querySelector('#signup-submit').onclick = function(event) {
   function signup(result) {
     // console.log(result);
     if (result == 2) {
-      alert('Заповніть поля');
+      M.toast({html: 'Заповніть поля!'});
     } else if (result == 1) {
-      alert('Успішно');
+      M.toast({html: 'Успішно!'});
+      closeModal();
     } else {
-      alert('Спробуйте пізніше');
+      M.toast({html: 'Спробуйте пізніше!'});
     }
   }
 }
@@ -45,9 +46,9 @@ document.querySelector('#login-submit').onclick = function(event) {
 
   function login(result) {
     if (result == 2) {
-      alert('Заповніть поля');
+      M.toast({html: 'Заповніть поля!'})
     } else if (result == 0) {
-      alert('Користувач не знайдений');
+      M.toast({html: 'Користувач не знайдений!'})
     } else {
       console.log(result);
       result = JSON.parse(result);
